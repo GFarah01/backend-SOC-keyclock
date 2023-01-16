@@ -1,0 +1,15 @@
+
+  security:
+    oauth2:
+      client:
+        registration:
+          gateway:
+            provider: my-keycloak-provider
+            client-id: spring-gateway-application
+            client-secret: 3a10af95-ee64-49f0-bac1-beb91d93c450
+            authorization-grant-type: authorization_code
+            redirect-uri: "{baseUrl}/login/oauth2/code/keycloak"
+            scope: openid,
+        provider:
+          my-keycloak-provider:
+            issuer-uri: http://localhost:8080/auth/realms/SOC-project
